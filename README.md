@@ -82,6 +82,4 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 ```
 ## Demo
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=z3ME6s1NQ0w
-" target="_blank"><img src="https://i.ytimg.com/vi/z3ME6s1NQ0w/hqdefault.jpg" width="650" height="360" /></a>
-<iframe width="650" height="340" src="https://www.youtube.com/embed/z3ME6s1NQ0w" frameborder="0" allowfullscreen></iframe>
+### http://www.youtube.com/watch?v=z3ME6s1NQ0w
