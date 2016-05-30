@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vineetchoudhary/InAppInvitation.svg?branch=master)](https://travis-ci.org/vineetchoudhary/InAppInvitation)
+
 # InAppInvitation
 A simple invitation UI library similar to WhatsApp app
 
