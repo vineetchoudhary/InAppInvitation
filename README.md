@@ -5,7 +5,7 @@ A simple invitation UI library similar to WhatsApp app
 
 ---
 
-### Setup View Setting and Sharing Content
+##1. Setup View Setting and Sharing Content
 
 ```
 // setup contact view default setting
@@ -23,8 +23,24 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 [shareContent setMessageTwitter:@"Twitter specific message."];
 [shareContent setUrlTwitter:[NSURL URLWithString:@"https://github.com/vineetchoudhary"]];
 ```
-    
-### Message Sharing Action
+
+##2. Present Pre-build Share Action Sheet
+```
+- (IBAction)buttonInAppInvitationTapped:(UIButton *)sender {
+    [InAppInvitation showSharingActionSheetOnViewController:self andCompletionHandler:^(SLComposeViewControllerResult result) {
+        if (result == SLComposeViewControllerResultDone) {
+            NSLog(@"Success");
+        }else{
+            NSLog(@"Failed");
+        }
+    }];
+}
+```
+   
+   
+##3. For Custom UI
+
+###3.1 Message Sharing Action
 
 ```
 - (IBAction)buttonMessageInvitationTapped:(UIButton *)sender {
@@ -40,7 +56,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 }
 ```
 
-### Email Sharing Action
+###3.2 Email Sharing Action
 ```
 - (IBAction)buttonEmailInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isEmailServiceAvailable]) {
@@ -55,7 +71,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 }
 ```
 
-### Facebook Sharing Action
+###3.3 Facebook Sharing Action
 ```
 - (IBAction)buttonFacebookInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isFacebookServiceAvailable]) {
@@ -70,7 +86,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 }
 ```
 
-### Twitter Sharing Action
+###3.4 Twitter Sharing Action
 ```
 - (IBAction)buttonTwitterInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isTwitterServiceAvailable]) {
@@ -84,6 +100,36 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
     }
 }
 ```
-## Demo
+###3.5 WhatsApp Sharing Action
+```
+- (IBAction)buttonWhatsAppInvitationTapped:(UIButton *)sender {
+    if ([InAppInvitation isWhatsAppServiceAvailable]) {
+        [InAppInvitation startWhatsAppInvitationService];
+    }else{
+        NSLog(@"WhatsApp app not installed in your device.");
+    }
+}
+```
+###3.6 Viber Sharing Action
+```
+- (IBAction)buttonViberInvitationTapped:(UIButton *)sender {
+    if ([InAppInvitation isViberServiceAvailable]) {
+        [InAppInvitation startViberInvitationService];
+    }else{
+        NSLog(@"Viber app not installed in your device.");
+    }
+}
+```
 
+
+##4. Demo
 ### http://www.youtube.com/watch?v=z3ME6s1NQ0w
+
+##5. Screenshots
+![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/1.png)![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/2.png)
+
+![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/3.png)
+
+![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/4.png)![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/5.png)
+
+![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/6.png)
