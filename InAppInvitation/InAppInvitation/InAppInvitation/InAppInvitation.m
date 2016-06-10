@@ -14,7 +14,12 @@
 #define MESSAGE_OPTION_TITLE @"Message"
 #define FACEBOOK_OPTION_TITLE @"Facebook"
 #define TWITTER_OPTION_TITLE @"Twitter"
+#define WHATSAPP_OPTION_TITLE @"WhatsApp"
+#define VIBER_OPTION_TITLE @"Viber"
 #define CANCEL_OPTION_TITLE @"Cancel"
+
+#define WHATSAPP_URI_SCHEMA @"whatsapp://send?text="
+#define VIBER_URI_SCHEMA @"viber://forward?text="
 
 NSString * const number_of_invitation_send = @"number_of_invitation_send";
 NSString * const invitation_screen_visibility_count = @"invitation_screen_visibility_count";
@@ -64,6 +69,20 @@ NSString * const app_open_count_after_invitation_shown = @"app_open_count_after_
         }]];
     }
     
+    //Whatsapp share
+    if ([InAppInvitation isWhatsAppServiceAvailable]) {
+        [shareOptionAlertSheet addAction:[UIAlertAction actionWithTitle:WHATSAPP_OPTION_TITLE style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [InAppInvitation startWhatsAppInvitationService];
+        }]];
+    }
+    
+    //Viber share
+    if ([InAppInvitation isWhatsAppServiceAvailable]) {
+        [shareOptionAlertSheet addAction:[UIAlertAction actionWithTitle:VIBER_OPTION_TITLE style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [InAppInvitation startWhatsAppInvitationService];
+        }]];
+    }
+    
     //cancel button
     [shareOptionAlertSheet addAction:[UIAlertAction actionWithTitle:CANCEL_OPTION_TITLE style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [shareOptionAlertSheet dismissViewControllerAnimated:YES completion:nil];
@@ -109,6 +128,20 @@ NSString * const app_open_count_after_invitation_shown = @"app_open_count_after_
     [viewController presentViewController:slComposeViewController animated:YES completion:nil];
 }
 
++(void)startWhatsAppInvitationService{
+    ShareContent *defaultContent = [ShareContent defaultShareContent];
+    NSString *whatsAppURI = [NSString stringWithFormat:@"%@%@",WHATSAPP_URI_SCHEMA,(defaultContent.messageWhatsApp)?defaultContent.messageWhatsApp:defaultContent.message];
+    whatsAppURI = [whatsAppURI stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:whatsAppURI]];
+}
+
++(void)startViberInvitationService{
+    ShareContent *defaultContent = [ShareContent defaultShareContent];
+    NSString *viberAppURI = [NSString stringWithFormat:@"%@%@",VIBER_URI_SCHEMA,(defaultContent.messageViber)?defaultContent.messageViber:defaultContent.message];
+    viberAppURI = [viberAppURI stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:viberAppURI]];
+}
+
 #pragma mark - Check Invitation Service Availability
 
 +(BOOL)isEmailServiceAvailable{
@@ -125,6 +158,14 @@ NSString * const app_open_count_after_invitation_shown = @"app_open_count_after_
 
 +(BOOL)isFacebookServiceAvailable{
     return [SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook];
+}
+
++(BOOL)isWhatsAppServiceAvailable{
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:WHATSAPP_URI_SCHEMA]];
+}
+
++(BOOL)isViberServiceAvailable{
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:VIBER_URI_SCHEMA]];
 }
 
 #pragma mark - Random Invitation
