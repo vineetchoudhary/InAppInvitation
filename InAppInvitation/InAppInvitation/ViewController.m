@@ -83,4 +83,30 @@
         NSLog(@"Twitter service not config in your devices.");
     }
 }
+
+- (IBAction)buttonWhatsAppInvitationTapped:(UIButton *)sender {
+    if ([InAppInvitation isWhatsAppServiceAvailable]) {
+        [InAppInvitation startWhatsAppInvitationService];
+    }else{
+        NSLog(@"WhatsApp app not installed in your device.");
+    }
+}
+
+- (IBAction)buttonViberInvitationTapped:(UIButton *)sender {
+    if ([InAppInvitation isViberServiceAvailable]) {
+        [InAppInvitation startViberInvitationService];
+    }else{
+        NSLog(@"Viber app not installed in your device.");
+    }
+}
+
+- (IBAction)buttonInAppInvitationTapped:(UIButton *)sender {
+    [InAppInvitation showSharingActionSheetOnViewController:self andCompletionHandler:^(SLComposeViewControllerResult result) {
+        if (result == SLComposeViewControllerResultDone) {
+            NSLog(@"Success");
+        }else{
+            NSLog(@"Failed");
+        }
+    }];
+}
 @end

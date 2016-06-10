@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,78 +17,140 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InAppInvitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQt-Gm-4EG">
-                                <rect key="frame" x="238" y="70" width="124" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvg-jS-vWF">
+                                <rect key="frame" x="238" y="70" width="124" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tY-XH-Bxz">
-                                <rect key="frame" x="238" y="178" width="125" height="244"/>
+                                <state key="normal" title="InAppInvitation"/>
+                                <connections>
+                                    <action selector="buttonInAppInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aKZ-oW-vbD"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNG-3u-eWc">
+                                <rect key="frame" x="255" y="172" width="90" height="256"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN1-aE-8EA">
-                                        <rect key="frame" x="20" y="20" width="85" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                        <state key="normal" title="Message"/>
-                                        <connections>
-                                            <action selector="buttonMessageInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgU-cz-CxA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvS-c7-O33">
-                                        <rect key="frame" x="20" y="76" width="85" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                        <state key="normal" title="Email"/>
-                                        <connections>
-                                            <action selector="buttonEmailInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qtY-1X-eoF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxW-bu-zZf">
-                                        <rect key="frame" x="20" y="132" width="85" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                        <state key="normal" title="Facebook"/>
-                                        <connections>
-                                            <action selector="buttonFacebookInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLa-mo-HNr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Z-Ry-wKz">
-                                        <rect key="frame" x="20" y="188" width="85" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                        <state key="normal" title="Twitter"/>
-                                        <connections>
-                                            <action selector="buttonTwitterInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqe-cb-Otj"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tY-XH-Bxz" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="128" width="90" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxW-bu-zZf">
+                                                <rect key="frame" x="0.0" y="5" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Facebook"/>
+                                                <connections>
+                                                    <action selector="buttonFacebookInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLa-mo-HNr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Z-Ry-wKz">
+                                                <rect key="frame" x="0.0" y="46" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Twitter"/>
+                                                <connections>
+                                                    <action selector="buttonTwitterInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqe-cb-Otj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTx-s3-Isa">
+                                                <rect key="frame" x="0.0" y="87" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Viber"/>
+                                                <connections>
+                                                    <action selector="buttonViberInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phN-QP-30Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fTx-s3-Isa" firstAttribute="leading" secondItem="3tY-XH-Bxz" secondAttribute="leading" id="8UJ-ri-E66"/>
+                                            <constraint firstItem="Q5Z-Ry-wKz" firstAttribute="top" secondItem="cxW-bu-zZf" secondAttribute="bottom" constant="5" id="JeB-BB-zID"/>
+                                            <constraint firstItem="fTx-s3-Isa" firstAttribute="top" secondItem="Q5Z-Ry-wKz" secondAttribute="bottom" constant="5" id="TYp-XK-Fi5"/>
+                                            <constraint firstItem="Q5Z-Ry-wKz" firstAttribute="leading" secondItem="3tY-XH-Bxz" secondAttribute="leading" id="aPR-hG-JxP"/>
+                                            <constraint firstAttribute="trailing" secondItem="fTx-s3-Isa" secondAttribute="trailing" id="ahl-ea-f0Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="cxW-bu-zZf" secondAttribute="trailing" id="h8v-7Z-r8C"/>
+                                            <constraint firstItem="cxW-bu-zZf" firstAttribute="leading" secondItem="3tY-XH-Bxz" secondAttribute="leading" id="m80-fk-9wA"/>
+                                            <constraint firstAttribute="bottom" secondItem="fTx-s3-Isa" secondAttribute="bottom" constant="5" id="mSP-eV-arN"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q5Z-Ry-wKz" secondAttribute="trailing" id="qUz-ky-KXP"/>
+                                            <constraint firstItem="cxW-bu-zZf" firstAttribute="top" secondItem="3tY-XH-Bxz" secondAttribute="top" constant="5" id="sPS-bG-Kkj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzd-h4-xZj" userLabel="View1">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="128"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBG-XA-QuD">
+                                                <rect key="frame" x="0.0" y="87" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="WhatsApp"/>
+                                                <connections>
+                                                    <action selector="buttonWhatsAppInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8En-k3-Hnf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN1-aE-8EA">
+                                                <rect key="frame" x="0.0" y="46" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Message"/>
+                                                <connections>
+                                                    <action selector="buttonMessageInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgU-cz-CxA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvS-c7-O33">
+                                                <rect key="frame" x="0.0" y="5" width="90" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                <state key="normal" title="Email"/>
+                                                <connections>
+                                                    <action selector="buttonEmailInvitationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qtY-1X-eoF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="wBG-XA-QuD" secondAttribute="bottom" constant="5" id="BKC-hx-vHn"/>
+                                            <constraint firstAttribute="trailing" secondItem="wBG-XA-QuD" secondAttribute="trailing" id="EdD-yB-Keg"/>
+                                            <constraint firstItem="CN1-aE-8EA" firstAttribute="leading" secondItem="fzd-h4-xZj" secondAttribute="leading" id="IT9-e3-zWh"/>
+                                            <constraint firstItem="UvS-c7-O33" firstAttribute="top" secondItem="fzd-h4-xZj" secondAttribute="top" constant="5" id="KMy-VQ-GRV"/>
+                                            <constraint firstAttribute="trailing" secondItem="UvS-c7-O33" secondAttribute="trailing" id="Pil-v6-JIi"/>
+                                            <constraint firstAttribute="trailing" secondItem="CN1-aE-8EA" secondAttribute="trailing" id="Pjc-Ti-wuY"/>
+                                            <constraint firstItem="CN1-aE-8EA" firstAttribute="top" secondItem="UvS-c7-O33" secondAttribute="bottom" constant="5" id="R84-zX-d18"/>
+                                            <constraint firstItem="wBG-XA-QuD" firstAttribute="top" secondItem="CN1-aE-8EA" secondAttribute="bottom" constant="5" id="Xbm-qA-Qwc"/>
+                                            <constraint firstItem="UvS-c7-O33" firstAttribute="leading" secondItem="fzd-h4-xZj" secondAttribute="leading" id="sBI-FO-61z"/>
+                                            <constraint firstItem="wBG-XA-QuD" firstAttribute="leading" secondItem="fzd-h4-xZj" secondAttribute="leading" id="xXf-of-5jG"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="leading" secondItem="UvS-c7-O33" secondAttribute="leading" id="6G8-IE-Cp8"/>
-                                    <constraint firstItem="cxW-bu-zZf" firstAttribute="top" secondItem="UvS-c7-O33" secondAttribute="bottom" constant="20" id="7J6-FM-S9F"/>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="leading" secondItem="3tY-XH-Bxz" secondAttribute="leading" constant="20" id="9vf-Ye-IQr"/>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="leading" secondItem="Q5Z-Ry-wKz" secondAttribute="leading" id="A03-U9-taK"/>
-                                    <constraint firstAttribute="trailing" secondItem="CN1-aE-8EA" secondAttribute="trailing" constant="20" id="Srp-Vh-fVs"/>
-                                    <constraint firstItem="UvS-c7-O33" firstAttribute="top" secondItem="CN1-aE-8EA" secondAttribute="bottom" constant="20" id="UlB-8K-SBg"/>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="trailing" secondItem="UvS-c7-O33" secondAttribute="trailing" id="VBX-Va-sbg"/>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="trailing" secondItem="Q5Z-Ry-wKz" secondAttribute="trailing" id="bah-8h-q7d"/>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="top" secondItem="3tY-XH-Bxz" secondAttribute="top" constant="20" id="dO6-Ru-8ZP"/>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="leading" secondItem="cxW-bu-zZf" secondAttribute="leading" id="fE4-xX-haR"/>
-                                    <constraint firstAttribute="bottom" secondItem="Q5Z-Ry-wKz" secondAttribute="bottom" constant="20" id="g8K-xk-kZV"/>
-                                    <constraint firstItem="Q5Z-Ry-wKz" firstAttribute="top" secondItem="cxW-bu-zZf" secondAttribute="bottom" constant="20" id="lUA-S4-B3J"/>
-                                    <constraint firstItem="CN1-aE-8EA" firstAttribute="trailing" secondItem="cxW-bu-zZf" secondAttribute="trailing" id="zCD-Ty-UAi"/>
+                                    <constraint firstAttribute="bottom" secondItem="fzd-h4-xZj" secondAttribute="bottom" id="Fos-67-IoS"/>
+                                    <constraint firstItem="fzd-h4-xZj" firstAttribute="top" secondItem="bNG-3u-eWc" secondAttribute="top" id="NRb-NA-ILn"/>
+                                    <constraint firstItem="3tY-XH-Bxz" firstAttribute="leading" secondItem="bNG-3u-eWc" secondAttribute="leading" id="OuU-DL-795"/>
+                                    <constraint firstItem="3tY-XH-Bxz" firstAttribute="leading" secondItem="fzd-h4-xZj" secondAttribute="trailing" id="PSf-Eo-H0S"/>
+                                    <constraint firstItem="3tY-XH-Bxz" firstAttribute="top" secondItem="fzd-h4-xZj" secondAttribute="bottom" id="ZTE-Rr-JIg"/>
+                                    <constraint firstAttribute="trailing" secondItem="3tY-XH-Bxz" secondAttribute="trailing" id="bfE-6i-d71"/>
+                                    <constraint firstItem="fzd-h4-xZj" firstAttribute="leading" secondItem="bNG-3u-eWc" secondAttribute="leading" id="fW1-a5-W1v"/>
+                                    <constraint firstAttribute="trailing" secondItem="fzd-h4-xZj" secondAttribute="trailing" id="fov-tk-VMy"/>
+                                    <constraint firstAttribute="bottom" secondItem="3tY-XH-Bxz" secondAttribute="bottom" id="iNt-wk-Aio"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Fos-67-IoS"/>
+                                        <exclude reference="PSf-Eo-H0S"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Fos-67-IoS"/>
+                                        <exclude reference="fov-tk-VMy"/>
+                                        <exclude reference="OuU-DL-795"/>
+                                        <include reference="PSf-Eo-H0S"/>
+                                        <exclude reference="ZTE-Rr-JIg"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eQt-Gm-4EG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="75L-ps-gBX"/>
-                            <constraint firstItem="eQt-Gm-4EG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Jfc-hz-mL5"/>
-                            <constraint firstItem="3tY-XH-Bxz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TIG-Dr-XmN"/>
-                            <constraint firstItem="3tY-XH-Bxz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g9Y-Ux-Geb"/>
+                            <constraint firstItem="bNG-3u-eWc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7jn-Qe-rj3"/>
+                            <constraint firstItem="bNG-3u-eWc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Byw-Og-BFq"/>
+                            <constraint firstItem="Cvg-jS-vWF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sbw-QL-hRx"/>
+                            <constraint firstItem="Cvg-jS-vWF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="XCB-qt-ZQO"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="379"/>
+            <point key="canvasLocation" x="565" y="378"/>
         </scene>
     </scenes>
 </document>
