@@ -123,7 +123,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 
 
 ##4. Video Demo on YouTube
-[![](https://img.youtube.com/vi/z3ME6s1NQ0w/0.jpg)](https://www.youtube.com/watch?v=z3ME6s1NQ0w)
+[![](https://i.ytimg.com/vi/z3ME6s1NQ0w/sddefault.jpg)](https://www.youtube.com/watch?v=z3ME6s1NQ0w)
 
 ---
 
