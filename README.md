@@ -122,10 +122,12 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 ```
 
 
-##4. Demo
+##4. Video Demo on YouTube
 [![](https://img.youtube.com/vi/z3ME6s1NQ0w/0.jpg)](https://www.youtube.com/watch?v=z3ME6s1NQ0w)
 
-##5. Screenshots
+---
+
+## Screenshots
 ![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/1.png)![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/2.png)
 
 ![](https://github.com/vineetchoudhary/InAppInvitation/blob/master/Screenshot/3.png)
