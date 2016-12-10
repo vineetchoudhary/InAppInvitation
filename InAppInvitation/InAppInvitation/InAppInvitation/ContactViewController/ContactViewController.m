@@ -81,7 +81,7 @@
         }
     };
     [self activityIndicatorVisible:YES];
-    [addressBook setSortDescriptors: @[[NSSortDescriptor sortDescriptorWithKey:@"name.firstName" ascending:YES], [NSSortDescriptor sortDescriptorWithKey:@"name.lastName" ascending:YES]]];
+    [addressBook setSortDescriptors: @[[NSSortDescriptor sortDescriptorWithKey:@"name.compositeName" ascending:YES],[NSSortDescriptor sortDescriptorWithKey:@"name.firstName" ascending:YES], [NSSortDescriptor sortDescriptorWithKey:@"name.lastName" ascending:YES]]];
     allKeys = [[NSMutableOrderedSet alloc] init];
     selectedContact = [[NSMutableOrderedSet<APContact *> alloc] init];
     contactsDictionnary = [[NSMutableDictionary<NSString *, NSArray<APContact *> *> alloc] init];
@@ -104,7 +104,7 @@
     [allKeys removeAllObjects];
     [contactsDictionnary removeAllObjects];
     [contacts enumerateObjectsUsingBlock:^(APContact * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        char key = [obj.name.firstName.capitalizedString characterAtIndex:0];
+        char key = [obj.name.compositeName.capitalizedString characterAtIndex:0];
         if (!(key >= 'A' && key <= 'Z')) {
             key = '#';
         }
@@ -195,7 +195,7 @@
                 [mailComposeViewController setDelegate:self];
                 [mailComposeViewController setMailComposeDelegate:self];
                 [mailComposeViewController setSubject:[ShareContent defaultShareContent].subject];
-                [mailComposeViewController setToRecipients:emailAddress];
+                [self setEmailRecipientsForMailComposeViewController:mailComposeViewController withEmailAddresses:emailAddress];
                 [mailComposeViewController setMessageBody:body isHTML:NO];
                 [self presentViewController:mailComposeViewController animated:YES completion:nil];
             }break;
@@ -205,7 +205,20 @@
         }
     }
 }
-
+-(void)setEmailRecipientsForMailComposeViewController:(MFMailComposeViewController *)mailComposeViewController withEmailAddresses:(NSArray *)emailAddresses
+{
+    switch ([ShareContent defaultShareContent].emailRecipientsType) {
+        case EmailRecipientsTypeCC:
+            [mailComposeViewController setCcRecipients:emailAddresses];
+            break;
+        case EmailRecipientsTypeBCC:
+            [mailComposeViewController setBccRecipients:emailAddresses];
+            break;
+        default:
+            [mailComposeViewController setToRecipients:emailAddresses];
+            break;
+    }
+}
 #pragma mark - MailComposeViewController Delegate
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
     _completionHandler((result == MFMailComposeResultSent)?SLComposeViewControllerResultDone:SLComposeViewControllerResultCancelled);

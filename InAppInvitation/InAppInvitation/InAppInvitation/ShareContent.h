@@ -7,7 +7,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
+typedef enum : NSUInteger{
+    EmailRecipientsTypeTo,
+    EmailRecipientsTypeCC,
+    EmailRecipientsTypeBCC,
+}EmailRecipientsType;
 @interface ShareContent : NSObject
 
 @property(nonatomic, strong) NSString *subject;
@@ -20,8 +24,9 @@
 @property(nonatomic, strong) NSString *messageFacebook;
 @property(nonatomic, strong) NSString *messageEmail;
 @property(nonatomic, strong) NSString *messageSMS;
-@property(nonatomic, strong) NSString *messageWhatsApp;
-@property(nonatomic, strong) NSString *messageViber;
+
+//Email Recipients Type
+@property(nonatomic, assign) EmailRecipientsType emailRecipientsType;
 
 //Individual URL
 @property(nonatomic, strong) NSURL *urlTwitter;
