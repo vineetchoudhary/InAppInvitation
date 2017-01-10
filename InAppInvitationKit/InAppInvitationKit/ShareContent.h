@@ -24,6 +24,8 @@ typedef enum : NSUInteger{
 @property(nonatomic, strong) NSString *messageFacebook;
 @property(nonatomic, strong) NSString *messageEmail;
 @property(nonatomic, strong) NSString *messageSMS;
+@property(nonatomic, strong) NSString *messageWhatsApp;
+@property(nonatomic, strong) NSString *messageViber;
 
 //Email Recipients Type
 @property(nonatomic, assign) EmailRecipientsType emailRecipientsType;

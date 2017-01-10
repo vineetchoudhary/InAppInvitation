@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "InAppInvitation.h"
+#import <InAppInvitationKit/InAppInvitationKit.h>
 
 @interface ViewController : UIViewController
 
