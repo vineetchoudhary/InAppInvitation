@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactViewController">
+            <connections>
+                <outlet property="activityIndicatorView" destination="gfc-wT-6sb" id="alt-Q0-UZt"/>
+                <outlet property="buttonCancel" destination="ktu-gt-L7t" id="ZlT-yC-7NK"/>
+                <outlet property="buttonDone" destination="ppa-C4-EeT" id="7vY-UW-ncV"/>
+                <outlet property="searchBar" destination="r7G-Xz-482" id="oaF-JN-rGP"/>
+                <outlet property="tableViewContact" destination="BiX-H0-Soi" id="V7b-06-JMw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBottomBar" destination="II4-Hf-1P8" id="sJE-hV-q4I"/>
+                <outlet property="viewBottomSperator" destination="WE0-mG-9qx" id="W89-B5-bp6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BiX-H0-Soi">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="549"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="r7G-Xz-482">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="RsN-vU-ROj"/>
+                        </connections>
+                    </searchBar>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="PkM-Nk-JuM"/>
+                        <outlet property="delegate" destination="-1" id="CVA-JI-Awu"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="II4-Hf-1P8">
+                    <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktu-gt-L7t">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="buttonCancelTapped:" destination="-1" eventType="touchUpInside" id="YSe-Vu-FOf"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqO-Ch-GQz">
+                            <rect key="frame" x="300" y="0.0" width="1" height="50"/>
+                            <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="aRL-uA-Pfi"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppa-C4-EeT">
+                            <rect key="frame" x="301" y="0.0" width="299" height="50"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="buttonDoneTapped:" destination="-1" eventType="touchUpInside" id="UOj-a6-MOt"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ktu-gt-L7t" secondAttribute="bottom" id="4zv-Y8-uDe"/>
+                        <constraint firstItem="ppa-C4-EeT" firstAttribute="leading" secondItem="QqO-Ch-GQz" secondAttribute="trailing" id="55U-2t-kFI"/>
+                        <constraint firstItem="QqO-Ch-GQz" firstAttribute="top" secondItem="II4-Hf-1P8" secondAttribute="top" id="DgV-qc-lax"/>
+                        <constraint firstItem="ppa-C4-EeT" firstAttribute="top" secondItem="II4-Hf-1P8" secondAttribute="top" id="DwN-tH-CN4"/>
+                        <constraint firstItem="QqO-Ch-GQz" firstAttribute="centerX" secondItem="II4-Hf-1P8" secondAttribute="centerX" id="Fv0-F7-Jkh"/>
+                        <constraint firstAttribute="bottom" secondItem="QqO-Ch-GQz" secondAttribute="bottom" id="VhH-1j-ROL"/>
+                        <constraint firstItem="ktu-gt-L7t" firstAttribute="top" secondItem="II4-Hf-1P8" secondAttribute="top" id="ZDp-tr-ZXr"/>
+                        <constraint firstAttribute="trailing" secondItem="ppa-C4-EeT" secondAttribute="trailing" id="eiC-kR-TSw"/>
+                        <constraint firstAttribute="bottom" secondItem="ppa-C4-EeT" secondAttribute="bottom" id="hsh-tS-Cn7"/>
+                        <constraint firstAttribute="height" constant="50" id="qfV-na-U2f"/>
+                        <constraint firstItem="ktu-gt-L7t" firstAttribute="leading" secondItem="II4-Hf-1P8" secondAttribute="leading" id="rwz-cn-iPu"/>
+                        <constraint firstItem="QqO-Ch-GQz" firstAttribute="leading" secondItem="ktu-gt-L7t" secondAttribute="trailing" id="zA7-Rs-b2g"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE0-mG-9qx">
+                    <rect key="frame" x="0.0" y="549" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="wQr-S9-ww6"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gfc-wT-6sb">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gfc-wT-6sb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2FM-TK-4Zq"/>
+                <constraint firstItem="BiX-H0-Soi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3hG-1p-cLY"/>
+                <constraint firstItem="gfc-wT-6sb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6AH-AG-rQJ"/>
+                <constraint firstAttribute="trailing" secondItem="II4-Hf-1P8" secondAttribute="trailing" id="8ba-VB-4On"/>
+                <constraint firstAttribute="bottom" secondItem="II4-Hf-1P8" secondAttribute="bottom" id="ANO-tc-aak"/>
+                <constraint firstItem="II4-Hf-1P8" firstAttribute="top" secondItem="WE0-mG-9qx" secondAttribute="bottom" id="Kzy-fl-Zpu"/>
+                <constraint firstAttribute="trailing" secondItem="WE0-mG-9qx" secondAttribute="trailing" id="SWN-d1-x8q"/>
+                <constraint firstItem="II4-Hf-1P8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sbx-qs-NmQ"/>
+                <constraint firstItem="BiX-H0-Soi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="U2Z-Qk-Bqs"/>
+                <constraint firstItem="WE0-mG-9qx" firstAttribute="top" secondItem="BiX-H0-Soi" secondAttribute="bottom" id="sKh-gl-VhO"/>
+                <constraint firstAttribute="trailing" secondItem="BiX-H0-Soi" secondAttribute="trailing" id="tC9-Ha-oav"/>
+                <constraint firstItem="WE0-mG-9qx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ypr-mW-B3m"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
