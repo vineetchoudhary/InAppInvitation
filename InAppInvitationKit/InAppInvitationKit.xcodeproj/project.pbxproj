@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11F87031E24C87600A54D23 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11F87021E24C87600A54D23 /* MessageUI.framework */; };
+		E11F87051E24C87B00A54D23 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E11F87041E24C87B00A54D23 /* Social.framework */; };
 		E1400C9D1E24BC5E00CBDB2E /* ContactTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E1400C521E24BC5E00CBDB2E /* ContactTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1400C9E1E24BC5E00CBDB2E /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1400C531E24BC5E00CBDB2E /* ContactTableViewCell.m */; };
 		E1400C9F1E24BC5E00CBDB2E /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1400C541E24BC5E00CBDB2E /* ContactTableViewCell.xib */; };
@@ -74,6 +76,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E11F87021E24C87600A54D23 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		E11F87041E24C87B00A54D23 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E1400B201E24B3A300CBDB2E /* InAppInvitationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InAppInvitationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1400C521E24BC5E00CBDB2E /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		E1400C531E24BC5E00CBDB2E /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
@@ -146,17 +150,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11F87051E24C87B00A54D23 /* Social.framework in Frameworks */,
+				E11F87031E24C87600A54D23 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11F87011E24C87600A54D23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E11F87041E24C87B00A54D23 /* Social.framework */,
+				E11F87021E24C87600A54D23 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1400B161E24B3A300CBDB2E = {
 			isa = PBXGroup;
 			children = (
 				E1400C4F1E24BC5E00CBDB2E /* InAppInvitationKit */,
 				E1400B211E24B3A300CBDB2E /* Products */,
+				E11F87011E24C87600A54D23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
