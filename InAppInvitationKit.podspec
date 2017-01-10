@@ -9,5 +9,5 @@ s.author        = { 'Vineet Choudhary' => 'vineetchoudhary@live.in' }
 s.ios.deployment_target = '8.0'
 s.source        = { :git => 'https://github.com/vineetchoudhary/InAppInvitation.git', :tag => s.version.to_s }
 s.source_files  = 'InAppInvitationKit/InAppInvitationKit/*.{h,m,c}'
-s.frameworks =
+s.frameworks = ‘MessageUI’, ‘Social’
 end
