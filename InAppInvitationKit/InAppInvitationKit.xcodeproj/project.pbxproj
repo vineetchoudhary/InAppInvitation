@@ -170,6 +170,23 @@
 		E11F871E1E24E18800A54D23 /* InAppInvitationKit */ = {
 			isa = PBXGroup;
 			children = (
+				E11F879F1E24E25500A54D23 /* ContactCore */,
+				E11F87A01E24E26B00A54D23 /* ContactView */,
+				E11F87A11E24E27C00A54D23 /* ContactViewSetting */,
+				E11F87581E24E18800A54D23 /* InAppInvitation.h */,
+				E11F87591E24E18800A54D23 /* InAppInvitation.m */,
+				E11F875A1E24E18800A54D23 /* InAppInvitation.xcassets */,
+				E11F875B1E24E18800A54D23 /* InAppInvitationKit.h */,
+				E11F875C1E24E18800A54D23 /* Info.plist */,
+				E11F875D1E24E18800A54D23 /* ShareContent.h */,
+				E11F875E1E24E18800A54D23 /* ShareContent.m */,
+			);
+			path = InAppInvitationKit;
+			sourceTree = "<group>";
+		};
+		E11F879F1E24E25500A54D23 /* ContactCore */ = {
+			isa = PBXGroup;
+			children = (
 				E11F871F1E24E18800A54D23 /* APAddress.h */,
 				E11F87201E24E18800A54D23 /* APAddress.m */,
 				E11F87211E24E18800A54D23 /* APAddressBook.h */,
@@ -219,23 +236,30 @@
 				E11F874D1E24E18800A54D23 /* APThread.h */,
 				E11F874E1E24E18800A54D23 /* APThread.m */,
 				E11F874F1E24E18800A54D23 /* APTypes.h */,
+			);
+			name = ContactCore;
+			sourceTree = "<group>";
+		};
+		E11F87A01E24E26B00A54D23 /* ContactView */ = {
+			isa = PBXGroup;
+			children = (
 				E11F87501E24E18800A54D23 /* ContactTableViewCell.h */,
 				E11F87511E24E18800A54D23 /* ContactTableViewCell.m */,
 				E11F87521E24E18800A54D23 /* ContactTableViewCell.xib */,
 				E11F87531E24E18800A54D23 /* ContactViewController.h */,
 				E11F87541E24E18800A54D23 /* ContactViewController.m */,
 				E11F87551E24E18800A54D23 /* ContactViewController.xib */,
+			);
+			name = ContactView;
+			sourceTree = "<group>";
+		};
+		E11F87A11E24E27C00A54D23 /* ContactViewSetting */ = {
+			isa = PBXGroup;
+			children = (
 				E11F87561E24E18800A54D23 /* ContactViewSetting.h */,
 				E11F87571E24E18800A54D23 /* ContactViewSetting.m */,
-				E11F87581E24E18800A54D23 /* InAppInvitation.h */,
-				E11F87591E24E18800A54D23 /* InAppInvitation.m */,
-				E11F875A1E24E18800A54D23 /* InAppInvitation.xcassets */,
-				E11F875B1E24E18800A54D23 /* InAppInvitationKit.h */,
-				E11F875C1E24E18800A54D23 /* Info.plist */,
-				E11F875D1E24E18800A54D23 /* ShareContent.h */,
-				E11F875E1E24E18800A54D23 /* ShareContent.m */,
 			);
-			path = InAppInvitationKit;
+			name = ContactViewSetting;
 			sourceTree = "<group>";
 		};
 		E1400B161E24B3A300CBDB2E = {

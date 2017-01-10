@@ -9,6 +9,7 @@
 @implementation ContactTableViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     // Initialization code
 }
 
