@@ -6,7 +6,7 @@ s.homepage      = 'https://github.com/vineetchoudhary/InAppInvitation'
 s.license       = { :type => 'MIT', :file => 'LICENSE' }
 s.author        = { 'Vineet Choudhary' => 'vineetchoudhary@live.in' }
 
-s.ios.deployment_target = '10.0'
+s.ios.deployment_target = '8.0'
 s.source        = { :git => 'https://github.com/vineetchoudhary/InAppInvitation.git' }
 s.source_files  = 'InAppInvitationKit/InAppInvitationKit/*'
 end
