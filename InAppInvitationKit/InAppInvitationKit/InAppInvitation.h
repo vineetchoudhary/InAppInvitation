@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <Social/Social.h>
 
-#import "ContactViewController/ContactViewController.h"
+#import "ContactViewController.h"
 
 @interface InAppInvitation : NSObject
 
