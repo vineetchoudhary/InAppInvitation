@@ -18,4 +18,3 @@ FOUNDATION_EXPORT const unsigned char InAppInvitationKitVersionString[];
 
 
 #import <InAppInvitationKit/InAppInvitation.h>
-#import <ContactViewController/ContactViewController.h>
