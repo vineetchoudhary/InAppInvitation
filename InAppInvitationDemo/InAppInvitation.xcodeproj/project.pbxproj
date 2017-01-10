@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1400BC01E24B69B00CBDB2E /* InAppInvitationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1400BBF1E24B69B00CBDB2E /* InAppInvitationKit.framework */; };
 		E18D1A5A1CEC35C0008605B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E18D1A591CEC35C0008605B2 /* main.m */; };
 		E18D1A5D1CEC35C0008605B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E18D1A5C1CEC35C0008605B2 /* AppDelegate.m */; };
 		E18D1A601CEC35C0008605B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18D1A5F1CEC35C0008605B2 /* ViewController.m */; };
@@ -16,7 +15,6 @@
 		E18D1A681CEC35C0008605B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18D1A661CEC35C0008605B2 /* LaunchScreen.storyboard */; };
 		E18D1A731CEC35C0008605B2 /* InAppInvitationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E18D1A721CEC35C0008605B2 /* InAppInvitationTests.m */; };
 		E18D1A7E1CEC35C0008605B2 /* InAppInvitationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E18D1A7D1CEC35C0008605B2 /* InAppInvitationUITests.m */; };
-		E18D1AF81CEC38AD008605B2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18D1AF71CEC38AD008605B2 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +48,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E1400BBF1E24B69B00CBDB2E /* InAppInvitationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InAppInvitationKit.framework; path = /Users/emp195/Documents/ProjectWorking/InAppInvitation/InAppInvitationDemo/InAppInvitationKit.framework; sourceTree = "<absolute>"; };
 		E18D1A551CEC35C0008605B2 /* InAppInvitation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InAppInvitation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18D1A591CEC35C0008605B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E18D1A5B1CEC35C0008605B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +64,6 @@
 		E18D1A791CEC35C0008605B2 /* InAppInvitationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppInvitationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18D1A7D1CEC35C0008605B2 /* InAppInvitationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InAppInvitationUITests.m; sourceTree = "<group>"; };
 		E18D1A7F1CEC35C0008605B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E18D1AF71CEC38AD008605B2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E18D1AF81CEC38AD008605B2 /* MessageUI.framework in Frameworks */,
-				E1400BC01E24B69B00CBDB2E /* InAppInvitationKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +94,6 @@
 		E18D1A4C1CEC35C0008605B2 = {
 			isa = PBXGroup;
 			children = (
-				E18D1AF71CEC38AD008605B2 /* MessageUI.framework */,
 				E18D1A571CEC35C0008605B2 /* InAppInvitation */,
 				E18D1A711CEC35C0008605B2 /* InAppInvitationTests */,
 				E18D1A7C1CEC35C0008605B2 /* InAppInvitationUITests */,
