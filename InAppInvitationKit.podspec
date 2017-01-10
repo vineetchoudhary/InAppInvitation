@@ -8,5 +8,5 @@ s.author        = { 'Vineet Choudhary' => 'vineetchoudhary@live.in' }
 
 s.ios.deployment_target = '10.0'
 s.source        = { :git => 'https://github.com/vineetchoudhary/InAppInvitation.git', :tag => s.version }
-s.source_files  = 'InAppInvitationKit/InAppInvitationKit/*'
+s.source_files  = 'InAppInvitationKit/InAppInvitationKit/*', 'InAppInvitationKit/InAppInvitationKit/ContactViewController/*', InAppInvitationKit/InAppInvitationKit/ContactViewController/ContactTableCell/*
 end
