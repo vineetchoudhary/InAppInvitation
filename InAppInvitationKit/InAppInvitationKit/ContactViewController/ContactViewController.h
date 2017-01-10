@@ -14,7 +14,7 @@
 #import "ShareContent.h"
 #import "APAddressBook.h"
 #import "ContactViewSetting.h"
-#import "ContactTableViewCell.h"
+#import "ContactTableCell/ContactTableViewCell.h"
 
 
 @class InAppInvitation;

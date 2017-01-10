@@ -20,5 +20,18 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
+    <key>NSContactsUsageDescription</key>
+    <string>App will use your contacts to send mesages/email</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fb</string>
+        <string>fbapi</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+        <string>fb-messenger-api</string>
+        <string>twitter</string>
+        <string>viber</string>
+        <string>whatsapp</string>
+    </array>
 </dict>
 </plist>
