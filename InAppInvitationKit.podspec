@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     s.license                   = { :type => 'MIT', :file => 'LICENSE' }
     s.author                    = { 'Vineet Choudhary' => 'vineetchoudhary@live.in' }
     s.platform                  = :ios, '8.0'
-    s.source                    = { :http => "https://github.com/vineetchoudhary/InAppInvitation/releases/download/#{s.version}/InAppInvitationKit.framework.zip" }
+    s.source                    = { :http => "https://github.com/vineetchoudhary/InAppInvitation/releases/download/0.1.0/InAppInvitationKit.framework.zip" }
     s.preserve_path             = "LICENSE"
     s.frameworks                = 'Social', 'UIKit'
     s.ios.vendored_frameworks   = 'InAppInvitationKit/InAppInvitationKit.framework'
