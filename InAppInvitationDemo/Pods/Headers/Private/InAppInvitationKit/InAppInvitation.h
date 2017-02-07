@@ -1,1 +1,0 @@
-../../../InAppInvitationKit/InAppInvitationKit/InAppInvitationKit/InAppInvitation.h
