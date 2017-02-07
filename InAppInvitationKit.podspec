@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
     s.source                    = { :http => "https://github.com/vineetchoudhary/InAppInvitation/releases/download/#{s.version}/InAppInvitationKit.framework.zip" }
     s.preserve_path             = "InAppInvitation/LICENSE"
     s.frameworks                = 'Social', 'UIKit'
-    s.vendored_frameworks       = 'InAppInvitationKit/InAppInvitationKit.framework'
+    s.ios.vendored_frameworks   = 'InAppInvitationKit/InAppInvitationKit.framework'
 end
