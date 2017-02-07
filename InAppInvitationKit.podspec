@@ -5,11 +5,11 @@ Pod::Spec.new do |s|
     s.description               = 'A simple invitation / sharing (Message, Email, WhatsApp, Facebook and Twitter, Viber ) UI library similar to WhatsApp app invitation feature.'
     s.homepage                  = 'https://github.com/vineetchoudhary/InAppInvitation'
     s.documentation_url         = 'https://github.com/vineetchoudhary/InAppInvitation'
-    s.license                   = { :type => 'MIT', :file => 'InAppInvitation/LICENSE' }
+    s.license                   = { :type => 'MIT', :file => 'LICENSE' }
     s.author                    = { 'Vineet Choudhary' => 'vineetchoudhary@live.in' }
     s.platform                  = :ios, '8.0'
     s.source                    = { :http => "https://github.com/vineetchoudhary/InAppInvitation/releases/download/#{s.version}/InAppInvitationKit.framework.zip" }
-    s.preserve_path             = "InAppInvitation/LICENSE"
+    s.preserve_path             = "LICENSE"
     s.frameworks                = 'Social', 'UIKit'
     s.ios.vendored_frameworks   = 'InAppInvitationKit/InAppInvitationKit.framework'
 end
