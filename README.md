@@ -5,7 +5,7 @@ A simple invitation UI library similar to WhatsApp app
 
 ---
 
-##1. Setup View Setting and Sharing Content
+## 1. Setup View Setting and Sharing Content
 
 ```
 // setup contact view default setting
@@ -24,7 +24,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 [shareContent setUrlTwitter:[NSURL URLWithString:@"https://github.com/vineetchoudhary"]];
 ```
 
-##2. Present Pre-build Share Action Sheet
+## 2. Present Pre-build Share Action Sheet
 ```
 - (IBAction)buttonInAppInvitationTapped:(UIButton *)sender {
     [InAppInvitation showSharingActionSheetOnViewController:self andCompletionHandler:^(SLComposeViewControllerResult result) {
@@ -38,9 +38,9 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 ```
    
    
-##3. For Custom UI
+## 3. For Custom UI
 
-###3.1 Message Sharing Action
+### 3.1 Message Sharing Action
 
 ```
 - (IBAction)buttonMessageInvitationTapped:(UIButton *)sender {
@@ -56,7 +56,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 }
 ```
 
-###3.2 Email Sharing Action
+### 3.2 Email Sharing Action
 ```
 - (IBAction)buttonEmailInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isEmailServiceAvailable]) {
@@ -71,7 +71,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 }
 ```
 
-###3.3 Facebook Sharing Action
+### 3.3 Facebook Sharing Action
 ```
 - (IBAction)buttonFacebookInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isFacebookServiceAvailable]) {
@@ -86,7 +86,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 }
 ```
 
-###3.4 Twitter Sharing Action
+### 3.4 Twitter Sharing Action
 ```
 - (IBAction)buttonTwitterInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isTwitterServiceAvailable]) {
@@ -100,7 +100,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
     }
 }
 ```
-###3.5 WhatsApp Sharing Action
+### 3.5 WhatsApp Sharing Action
 ```
 - (IBAction)buttonWhatsAppInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isWhatsAppServiceAvailable]) {
@@ -110,7 +110,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
     }
 }
 ```
-###3.6 Viber Sharing Action
+### 3.6 Viber Sharing Action
 ```
 - (IBAction)buttonViberInvitationTapped:(UIButton *)sender {
     if ([InAppInvitation isViberServiceAvailable]) {
@@ -122,7 +122,7 @@ ShareContent *shareContent = [ShareContent defaultShareContent];
 ```
 
 
-##4. Video Demo on YouTube
+## 4. Video Demo on YouTube
 [![](https://i.ytimg.com/vi/z3ME6s1NQ0w/sddefault.jpg)](https://www.youtube.com/watch?v=z3ME6s1NQ0w)
 
 ---
